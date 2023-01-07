@@ -17,6 +17,7 @@ body{
     text-align: end;
     padding: 5px 30px 5px 0;
     position: relative;
+    margin: 0 0 3vw 0;
     
   }
   &__inscription{
@@ -30,49 +31,57 @@ body{
     &::before {
       content: '';
       position: absolute;
-      left: 0; bottom: 10px;
+      left: 0; bottom: 14px;
       width: 0%;
       height: 1.5px;
       background-color: $white;
-      transition: width 0.35s;
+      transition: width 0.5s;
     }
     &:hover::before {
       width: 100%;
     }
   }
 
-  &__shadow{
-    position: absolute;
-    opacity: 40%;
-    filter: blur(50px);
-    border-radius: 50%;
-  }
-  .shadow_blue{
-    top: -850px;
-    right: -245px;
-    width: 745px;
-    height: 899px;
+  &__shadow_blue{
+    top: -77vw;
+    right: -17vw;
+    width: 55vw;
+    height: 80vw;
     background-color: $light-blue;
+    z-index: -1;
   }
-  .shadow_yellow{
-    width: 745px;
-    height: 757px;
+  &__shadow_yellow{
+    width: 50vw;
+    height: 50vw;
     background-color: $yellow;
-    top: -660px;
-    right: -500px;
+    top:-45vw;
+    right: -26vw;
+    z-index: -1;
   }
 
-  &__firm{
+  &__logo{
     text-transform: uppercase;
     letter-spacing: 10px;
     font-size: 2vw;
-    margin: 3vw 0 0.5vw 0;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0; bottom: 0px;
+      width: 0%;
+      height: 1.5px;
+      background-color: $white;
+      transition: width 0.5s;
+    }
+    &:hover::before {
+      width: 100%;
+    }
 
   }
   &__signature{
     font-weight: normal;
     font-size: 0.8vw;
-    margin: 0;
+    margin: 0.5vw 0 0 0 ;
   }
 
 
@@ -93,26 +102,86 @@ body{
 .wrapper{
   padding-left: 15vw;
 }
+.shadow{
+  position: absolute;
+  opacity: 0.4;
+  filter: blur(50px);
+  border-radius: 50%;
+}
 
 .info{
+  position: relative;
   &__wrapper{
     padding-left: 22vw;
     padding-right: 4vw;
+
   }
-  &__title{
-    text-transform: uppercase;
+  .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title{
+      color: $white;
+      text-transform: uppercase;  
+      position: relative;
+      &_last{
+        margin-left: 2vw;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0; bottom: -2px;
+        width: 0%;
+        height: 1.5px;
+        background-color: $white;
+        transition: width 0.5s;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+    }
+    
+  }
+
+  &__shadow_blue{
+    top: -20%;
+    right: -70%;
+    width: 100vw;
+    height: 60vw;
+    opacity: 0.2;
+    background-color: $light-blue;
+    z-index: -1;
+  }
+  &__shadow_pink{
+    top: -10%;
+    left: -95%;
+    width: 100vw;
+    height: 55vw;
+    opacity: 0.8;
+    background-color: $dark-pink;
+    z-index: -1;
   }
   .card-list{
     @include list;
+    margin-top: 1vw;
     &__title{
       font-size: 3vw;
       text-transform: uppercase;
     }
+    &__text{
+      font-size: 1.1vw;
+    }
     &__item{
-      border: 1px solid $white;
+      border: 1px solid rgb(255,255,255, 0.5);
       border-left: none;
       border-right: none;
-
+      &:first-child{
+        border-top: 1px solid rgb(255,255,255, 1);
+      }
+      &:last-child{
+        border-bottom: 1px solid rgb(255,255,255, 1);
+      }
     }
     &__holder{
       display: grid;
