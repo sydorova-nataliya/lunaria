@@ -1,0 +1,125 @@
+body{
+  background-color: $black;
+  color: $white;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  margin: 5px 15px;
+}
+.container{
+  padding: 0 7vw;
+}
+.header{
+    margin: 0;
+  .header-holder{
+    border: 1px solid $white;
+    border-left: none;
+    border-right: none;
+    text-align: end;
+    padding: 5px 30px 5px 0;
+    position: relative;
+    
+  }
+  &__inscription{
+    display: inline-block;
+    color: $yellow;
+    position: relative;
+    font-size: 1vw;
+    &_blue{
+      color: $blue;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0; bottom: 10px;
+      width: 0%;
+      height: 1.5px;
+      background-color: $white;
+      transition: width 0.35s;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  &__shadow{
+    position: absolute;
+    opacity: 40%;
+    filter: blur(50px);
+    border-radius: 50%;
+  }
+  .shadow_blue{
+    top: -850px;
+    right: -245px;
+    width: 745px;
+    height: 899px;
+    background-color: $light-blue;
+  }
+  .shadow_yellow{
+    width: 745px;
+    height: 757px;
+    background-color: $yellow;
+    top: -660px;
+    right: -500px;
+  }
+
+  &__firm{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 2vw;
+    margin: 3vw 0 0.5vw 0;
+
+  }
+  &__signature{
+    font-weight: normal;
+    font-size: 0.8vw;
+    margin: 0;
+  }
+
+
+  &__title{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 3vw;
+    margin: 2.5vw 0 0.5vw 0;
+    padding: 5% 20% 0 0;
+  }
+  &__subtitle{
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-weight: normal;
+    margin: 0 0 9% 0;
+  }
+}
+.wrapper{
+  padding-left: 15vw;
+}
+
+.info{
+  &__wrapper{
+    padding-left: 22vw;
+    padding-right: 4vw;
+  }
+  &__title{
+    text-transform: uppercase;
+  }
+  .card-list{
+    @include list;
+    &__title{
+      font-size: 3vw;
+      text-transform: uppercase;
+    }
+    &__item{
+      border: 1px solid $white;
+      border-left: none;
+      border-right: none;
+
+    }
+    &__holder{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+
+  }
+
+}
