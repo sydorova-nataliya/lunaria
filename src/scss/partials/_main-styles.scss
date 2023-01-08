@@ -3,23 +3,32 @@ body{
   color: $white;
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
-  margin: 5px 15px;
+  margin: 1vw 15px;
 }
 .container{
   padding: 0 7vw;
 }
+.wrapper{
+  padding-left: 15vw;
+}
+.shadow{
+  position: absolute;
+  opacity: 0.4;
+  filter: blur(50px);
+  border-radius: 50%;
+}
 .header{
     margin: 0;
+    min-height: 100vh;
   .header-holder{
-    border: 1px solid $white;
-    border-left: none;
-    border-right: none;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
     text-align: end;
     padding: 5px 30px 5px 0;
     position: relative;
-    margin: 0 0 3vw 0;
-    
+    margin: 0 0 4% 0;
   }
+
   &__inscription{
     display: inline-block;
     color: $yellow;
@@ -81,7 +90,7 @@ body{
   &__signature{
     font-weight: normal;
     font-size: 0.8vw;
-    margin: 0.5vw 0 0 0 ;
+    margin: 1% 0 0 0 ;
   }
 
 
@@ -89,33 +98,25 @@ body{
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 3vw;
-    margin: 2.5vw 0 0.5vw 0;
-    padding: 5% 20% 0 0;
+    margin: 5% 5% 1% 0;
   }
   &__subtitle{
     text-transform: uppercase;
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: normal;
-    margin: 0 0 9% 0;
+    margin: 0 0 18% 0;
+    font-family: 'Marcellus', serif;
   }
 }
-.wrapper{
-  padding-left: 15vw;
-}
-.shadow{
-  position: absolute;
-  opacity: 0.4;
-  filter: blur(50px);
-  border-radius: 50%;
-}
+
 
 .info{
   position: relative;
   &__wrapper{
     padding-left: 22vw;
     padding-right: 4vw;
-
   }
+
   .nav{
     display: flex;
     align-items: center;
@@ -141,9 +142,7 @@ body{
         width: 100%;
       }
     }
-    
   }
-
   &__shadow_blue{
     top: -20%;
     right: -70%;
@@ -162,33 +161,102 @@ body{
     background-color: $dark-pink;
     z-index: -1;
   }
+
   .card-list{
     @include list;
     margin-top: 1vw;
     &__title{
-      font-size: 3vw;
+      font-size: 2.8vw;
       text-transform: uppercase;
     }
     &__text{
       font-size: 1.1vw;
     }
+    &__wrapper{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-left: 14vw;
+      align-items: center;
+    }
+    &__number{
+      opacity: 0.5;
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 3vw;
+    }
     &__item{
-      border: 1px solid rgb(255,255,255, 0.5);
-      border-left: none;
-      border-right: none;
+      border-top: 1px solid $main-grey;
+      border-bottom: 1px solid $main-grey;
       &:first-child{
-        border-top: 1px solid rgb(255,255,255, 1);
+        border-top: 1px solid $white;
       }
       &:last-child{
-        border-bottom: 1px solid rgb(255,255,255, 1);
+        border-bottom: 1px solid $white;
       }
     }
     &__holder{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
       align-items: center;
+      justify-content: space-between;
     }
 
   }
 
+}
+
+
+.tabs{
+  border-bottom: 1px solid $white;
+  padding: 5vw 6.5vw ;
+  &__tabset{
+    @include list;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    margin-bottom: 1vw;
+  }
+  &__btn{
+    font-family: 'Marcellus', serif;
+    text-transform: uppercase;
+    color: $main-grey;
+    font-size: 1.5vw;
+    position: relative;
+    &::before{
+      content: '+';
+      position: absolute;
+      left: -30px; 
+      top: 0px;
+    }
+  }
+  &__btn.active{
+    color: $white;
+    &::before{
+      content: '-';
+      position: absolute;
+      left: -30px; 
+      top:-3px;
+      width: 0%;
+    }
+  }
+  &__content{
+    display: none;
+  }
+  &__content.active{
+    display: block;
+    width: 15vw;
+  }
+  &__content.active:nth-child(2){
+    transform: translate(17.4vw,0);
+  }
+  &__content.active:nth-child(3){
+    transform: translate(36.6vw,0);
+  }
+  &__content.active:nth-child(4){
+    transform: translate(71.7vw,0);
+  }
+  &__holder{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
