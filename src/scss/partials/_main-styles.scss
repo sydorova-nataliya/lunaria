@@ -17,6 +17,20 @@ body{
   filter: blur(50px);
   border-radius: 50%;
 }
+.title{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 3vw;
+  margin: 10% 5% 1% 0;
+}
+.holder{
+  padding-left: 22vw;
+  padding-right: 4vw;
+}
+.img{
+  background-size: cover;
+   background-position: center;
+}
 .header{
     margin: 0;
     min-height: 100vh;
@@ -93,18 +107,14 @@ body{
     margin: 1% 0 0 0 ;
   }
 
-
-  &__title{
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 3vw;
-    margin: 5% 5% 1% 0;
+  .title-holder{
+    display: flex;
+    flex-direction: column;
   }
   &__subtitle{
     text-transform: uppercase;
     font-size: 1.2vw;
     font-weight: normal;
-    margin: 0 0 18% 0;
     font-family: 'Marcellus', serif;
   }
 }
@@ -112,11 +122,6 @@ body{
 
 .info{
   position: relative;
-  &__wrapper{
-    padding-left: 22vw;
-    padding-right: 4vw;
-  }
-
   .nav{
     display: flex;
     align-items: center;
@@ -228,6 +233,18 @@ body{
       left: -30px; 
       top: 0px;
     }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0; bottom: 0px;
+      width: 0%;
+      height: 1.5px;
+      background-color: $white;
+      transition: width 0.5s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
   }
   &__btn.active{
     color: $white;
@@ -259,4 +276,77 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+.about{
+  overflow: visible;
+  &__title{
+    margin:  0;
+  }
+  &__text-holder{
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0 0 0;
+  }
+  &__text{
+    width: 40%;
+  }
+  &__link{
+    color: $white;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -2px;
+      width: 0%;
+      height: 1.5px;
+      background-color: $white;
+      transition: width 0.5s;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+  &__cards{
+    @include list;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+  }
+  &__item{
+    position: relative;
+  }
+  .img{
+    height: 20vw;
+    width: 15vw;
+    z-index: -2;
+  }
+  .gradient {
+    margin: 0;
+  }
+  .gradient::before {
+    content: '';
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(42, 30, 175, 0.9) 15%, rgba(0, 0, 0, 0) 50%);
+  }
+  &__name{
+    position: absolute;
+    z-index: 20;
+    bottom: 50px;
+    left: -20px;
+    letter-spacing: 1px;
+  }
+  &__job{
+    position: absolute;
+    z-index: 20;
+    bottom: 23px;
+    left: -20px;
+    letter-spacing: 1px;
+    font-size: 0.8vw;
+  }
+  
 }
