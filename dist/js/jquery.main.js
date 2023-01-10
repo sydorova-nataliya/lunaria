@@ -23,11 +23,14 @@ $( document ).ready(function() {
         })
     });
 
-    // $('.slider').slick({
-    //     dots: true,
-    //     infinite: true,
-    //     arrows: false,
-    //     adaptiveHeight: true
-    //   });
+    $('.slider').slick({
+        dots: false,
+        infinite: true,
+        arrows: true,
+        prevArrow: '<i class="fa slider-arrows arrows-left fa-arrow-left"></i>',
+        nextArrow: '<i class="fa slider-arrows arrows-right fa-arrow-right"></i>',
+        slidesToShow: 2,
+        adaptiveHeight: true
+      });
 });
 
