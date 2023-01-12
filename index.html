@@ -1,147 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunaria</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/jquery.main.js"></script> 
-    <script src="https://kit.fontawesome.com/d16d7400e1.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunaria</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.main.js"></script>
+
+  <script src="https://kit.fontawesome.com/d16d7400e1.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.min.css">
 </head>
     <body>
         <header class="header">
-           
             <div class="header-holder">
-                <div class="container ">
-                    <a class="header__inscription"><p>Stand <span class="header__inscription_blue">with Ukraine</span></p></a>
+                <div class="container">
+                    <a class="header__inscription main-link">
+                    <p>Stand <span class="header__inscription_blue">with Ukraine</span></p></a>
                     <div class="shadow header__shadow_blue"></div>
                     <div class="shadow header__shadow_yellow"></div>
                 </div>
             </div>
-            
             <div class="container">
-                <a class="header__logo">Lunaria</a>
+                <a class="header__logo main-link">Lunaria</a>
                 <h4 class="header__signature">WEB. UI. DEV.</h4>
                 <div class="wrapper">
                     <div class="title-holder">
-                        <h1 class="header__title title">Lunaria is the leading IT  integrator for taking your  business to the next level</h1>
+                        <h1 class="header__title title">Lunaria is the leading IT integrator for taking your business to the next level</h1>
                         <h2 class="header__subtitle">Drive profit with omnichannel IT transformation</h2>
                     </div>
                 </div>
             </div>
         </header>
+
         <main>
-            <section class=" info wow slideInUp"  data-wow-duration="1.5s" >
+            <section class="info wow slideInUp" data-wow-duration="1.5s">
                 <nav class="holder nav">
-                    <a href="" class="nav__title">What we do:</a>
+                    <a href="#" class="nav__title main-link">What we do:</a>
                     <div>
-                        <a href="" class="nav__title">portfolio</a>
-                        <a href="" class="nav__title nav__title_last">Contact Us</a>
+                        <a href="#" class="nav__title main-link">portfolio</a> <a href="#" class="nav__title nav__title_last main-link">Contact Us</a>
                     </div>
                 </nav>
-
                 <div class="shadow info__shadow_blue"></div>
                 <div class="shadow info__shadow_pink"></div>
-                    <ul class="info__card-list card-list">
-                        <li class="card-list__item container">
-                            <article class="card-list__holder ">
-                                <p class="card-list__number">01</p>
-                                <div class="card-list__wrapper">
-                                    <h5 class="card-list__title">Design & UX</h4>
-                                    <p class="card-list__text">Development of a detailed roadmap to create or enhance your brand or digital product experience</p>
-                                </div>
-                            </article>
-                        </li>
-                        <li class="card-list__item container">
-                            <article class=" card-list__holder ">
-                                <p class="card-list__number">02</p>
-                                <div class="card-list__wrapper">
-                                    <h5 class="card-list__title">Developmentand integration</h4>
-                                    <p class="card-list__text">Development, support, and scaling of high-traffic and high-load IT projects. Development of core website functionality, data storage and processing systems, data platforms, and buses. Back-end-developmentBack-end-development.</p>
-                                </div>
-                            </article>
-                        </li>
-                        <li class="card-list__item container">
-                            <article class=" card-list__holder ">
-                                <p class="card-list__number">03</p>
-                                <div class="card-list__wrapper">
-                                    <h5 class="card-list__title">Business and systems analytics</h4>
-                                    <p class="card-list__text">Transformation of business development goals into an approved list of tasks for the implementation, customization, or integration of third-party or in-house IT solutions.</p>
-                                </div>
-                            </article>
-                        </li>
-                    </ul>    
+                <ul class="info__card-list card-list">
+                    <li class="card-list__item container">
+                        <article class="card-list__holder">
+                            <p class="card-list__number">01</p>
+                            <div class="card-list__wrapper">
+                            <h5 class="card-list__title">Design & UX</h5>
+                            <p class="card-list__text">Development of a detailed roadmap to create or enhance your brand or digital product experience</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="card-list__item container">
+                        <article class="card-list__holder">
+                            <p class="card-list__number">02</p>
+                            <div class="card-list__wrapper">
+                            <h5 class="card-list__title">Developmentand integration</h5>
+                            <p class="card-list__text">Development, support, and scaling of high-traffic and high-load IT projects. Development of core website functionality, data storage and processing systems, data platforms, and buses. Back-end-developmentBack-end-development.</p>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="card-list__item container">
+                        <article class="card-list__holder">
+                            <p class="card-list__number">03</p>
+                            <div class="card-list__wrapper">
+                            <h5 class="card-list__title">Business and systems analytics</h5>
+                            <p class="card-list__text">Transformation of business development goals into an approved list of tasks for the implementation, customization, or integration of third-party or in-house IT solutions.</p>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
             </section>
 
             <section class="tabs">
                 <ul class="tabs__tabset">
-                    <li class="tabs__item"><a class="tabs__btn" href="#tab1">Quality</a></li>
-                    <li class="tabs__item"><a class="tabs__btn" href="#tab2">Guaranty</a></li>
-                    <li class="tabs__item"><a class="tabs__btn" href="#tab3">transparency of cooperation</a></li>
-                    <li class="tabs__item"><a class="tabs__btn" href="#tab4">confidentiality</a></li>
+                    <li class="tabs__item">
+                        <a class="tabs__btn" href="#tab1">Quality</a>
+                    </li>
+                    <li class="tabs__item">
+                        <a class="tabs__btn" href="#tab2">Guaranty</a>
+                    </li>
+                    <li class="tabs__item">
+                        <a class="tabs__btn" href="#tab3">transparency of cooperation</a>
+                    </li>
+                    <li class="tabs__item">
+                        <a class="tabs__btn" href="#tab4">confidentiality</a>
+                    </li>
                 </ul>
                 <div class="tabs__holder">
                     <div id="tab1" class="tabs__content zoomInUp">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis autem facere velit nesciunt officia non nemo minima numquam hic, modi possimus, et in expedita voluptatibus excepturi dicta temporibus .
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis autem facere velit nesciunt officia non nemo minima numquam hic, modi possimus, et in expedita voluptatibus excepturi dicta temporibus .
                     </div>
-                    <div id="tab2" class="tabs__content ">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat beatae laboriosam, deleniti amet aliquid minima sunt itaque, consequatur dicta, dolorum voluptatem in omnis?
+                    <div id="tab2" class="tabs__content">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat beatae laboriosam, deleniti amet aliquid minima sunt itaque, consequatur dicta, dolorum voluptatem in omnis?
                     </div>
-                    <div id="tab3" class="tabs__content ">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.</p>
+                    <div id="tab3" class="tabs__content">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.
                     </div>
-                    <div id="tab4" class="tabs__content ">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, repudiandae, cumque, perferendis quidem dolore quisquam quae nihil necessitatibus atque maxime dolores dicta sequi!
+                    <div id="tab4" class="tabs__content">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, repudiandae, cumque, perferendis quidem dolore quisquam quae nihil necessitatibus atque maxime dolores dicta sequi!
                     </div>
                 </div>
             </section>
 
             <section class="about">
-                <div class="holder about__text-holder">
-                    <h5 class="about__title title">About US</h5>
-                    <div class="about__text">
-                        We operate with over 20 employees in more than 5 countries in a number of key disciplines such as sales & marketing, research & development, operations & supply chain, information technology, finance and human resources. 
-                        <p><a href="" class="about__link">MORE ABOUT US <i class="fa-solid fa-arrow-right"></i></a></p> 
+                <div class="holder text-holder">
+                    <h5 class="side-title title wow slideInLeft">About US</h5>
+                    <div class="side-text wow slideInRight">
+                        We operate with over 20 employees in more than 5 countries in a number of key disciplines such as sales & marketing, research & development, operations & supply chain, information technology, finance and human resources.
+                        <p><a href="" class="about__link">MORE ABOUT US</a></p>
                     </div>
                 </div>
                 <div class="container">
-
                     <ul class="about__cards">
-                        <li class="about__item ">
+                        <li class="about__item wow slideInUp" data-wow-offset="200" data-wow-delay="0.3s" data-wow-duration="1.2s">
                             <figure class="gradient">
                                 <figcaption class="about__name">VANESSA KANU</figcaption>
                                 <figcaption class="about__job">Creative Design Derector</figcaption>
                                 <div class="img" style="background-image: url('./img/photo01.png')"></div>
                             </figure>
                         </li>
-                        <li class="about__item ">
+                        <li class="about__item wow slideInUp" data-wow-offset="200" data-wow-delay="0.3s" data-wow-duration="1.4s">
                             <figure class="gradient">
                                 <figcaption class="about__name">JEFF PURITT</figcaption>
                                 <figcaption class="about__job">Chief Legal Officer</figcaption>
                                 <div class="img" style="background-image: url('./img/photo02.png')"></div>
                             </figure>
                         </li>
-                        </li>
-                        <li class="about__item ">
+                        <li class="about__item wow slideInUp" data-wow-offset="200" data-wow-delay="0.3s" data-wow-duration="1.6s">
                             <figure class="gradient">
                                 <figcaption class="about__name">MICHAEL RINGMAN</figcaption>
                                 <figcaption class="about__job">Creative Design Derector</figcaption>
                                 <div class="img" style="background-image: url('./img/photo03.png')"></div>
                             </figure>
                         </li>
-                    </ul>  
-                    
+                    </ul>
                 </div>
             </section>
+
+            <section class="projects">
+                <div class="holder text-holder">
+                    <h5 class="side-title title wow slideInLeft">Projects</h5>
+                    <div class="side-text wow slideInRight">we combine sharp design with rich technology to craft exciting brands.
+                    </div>
+                </div>
+                <div class="slider container wow fadeIn">
+                    <div class="slider__box">
+                        <div class="img slider__photo slide1" style="background-image: url('./img/slide1.png')"></div>
+                    </div>
+                    <div class="slider__box">
+                        <div class="img slider__photo slide2" style="background-image: url('./img/slide2.png')"></div>
+                        <div class="slider__text-holder">
+                            <a class="main-link slider__main-link" href="#">ROSEMARY FOOD</a>
+                            <p class="text slider__text">Elevating an experience for an iconic California beer company</p>
+                        </div>
+                    </div>
+                    <div class="slider__box">
+                        <div class="img slider__photo slide3" style="background-image: url('./img/slide3.png')"></div>
+                        <div class="slider__text-holder">
+                            <a class="main-link slider__main-link" href="#">CONEXE</a>
+                            <p class="text slider__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                        </div>
+                    </div>
+                    <div class="slider__box">
+                        <div class="img slider__photo slide4" style="background-image: url('./img/slide4.png')"></div>
+                        <div class="slider__text-holder">
+                            <a class="main-link slider__main-link" href="#">Lorem</a>
+                            <p class="text slider__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus officia, suscipit in praesentium voluptates.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form wow slideInUp">
+                <div class="holder text-holder">
+                    <h5 class="side-title title wow slideInLeft">tell us about your project</h5>
+                    <div class="side-text wow slideInRight">Since the launch of his eponymous jewelry line in 2000, Marco Bicego has redefined modern luxury with the launch of his eponymous jewelry line in 8u Marco Bicego has redefined modern luxury with sensuous,
+                    </div>
+                </div>
+                <div class="holder">
+                    <form action="">
+                    <div class="layout">
+                        <div class="form__input-holder">
+                            <input type="text" class="form__name form-input" placeholder="Your Name"> 
+                            <label class="form__range-title" for="form__range">Your budget of project:</label> 
+                            <div class="range-holder">
+                                <div class="form__range"></div>
+                                <p class="form__range-value">$ 1250</p>
+                            </div>
+
+                        </div>
+                        <div class="form__input-holder form__input-holder_left">
+                            <input type="text" class="form__name form-input" placeholder="Your Contact / Email or Phone with Messengers"> 
+                            <input type="text" class="form__name form-input" placeholder="Add text or Comment About project">
+                        </div>
+                    </div>
+                    <button class="form__btn">SEND</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="contact wow zoomIn">
+                <div class="holder text-holder">
+                    <h5 class="side-title title wow slideInLeft">Contact US</h5>
+                    <div class="side-text wow slideInRight">If you have any questions, please contact us. 
+                        To enhance productivity each project team has its own space in the office. If someone needs silence, there are spaces with cozy armchairs to make you comfortable. 
+                    </div>
+                    
+                </div>
+                <div class="layout holder">
+                    <div class="contact__holder">
+                        <a class="contact__mail" href="mailto:Lunaria@gmail.com">Lunaria@gmail.com</a>
+                        <a class="contact__tel main-link" href="tel:+320873467911">+32 087 3467 911</a>
+                    </div>
+                    <div class="contact__holder contact__holder_left">
+                        <i class="fa-solid fa-location-dot position"></i>
+                        <address class="contact__adress">2650 Thousand <br> Oaks Blvd, Memphis, <br> TN 38118</address>
+                        <p class="contact__list-title">Our social network:</p>
+                        <ul class="contact__list">
+                            <li class="contact__item"><a href="#"><i class="fa-brands fa-youtube icon"></i></li></a>
+                            <li class="contact__item"><a href="#"><i class="fa-brands fa-instagram icon"></i></li></a>
+                            <li class="contact__item"><a href="#"><i class="fa-brands fa-twitter icon"></i></li></a>
+                            <li class="contact__item"><a href="#"><i class="fa-brands fa-facebook-f icon"></i></li></a>
+                            <li class="contact__item"><a href="#"><i class="fa-brands fa-linkedin-in icon"></i></li></a>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <a id="scroll">UP</a>
         </main>
-        <script src="js/wow.js"></script>
+
+        <footer class="footer">
+            <div class="container">
+                <div>
+                    <a href="" class="footer__logo main-link">
+                    <h6>LUNARIA</h6></a> © 2010–2022 All rights are register
+                </div>
+                <a href="#" class="footer__link">Terms</a> 
+                <a href="#" class="footer__link">POLICY</a>
+            </div>
+        </footer>
+        <script src="js/wow.js"></script> 
         <script>
-            new WOW().init();
+                new WOW().init();
         </script>
     </body>
 </html>

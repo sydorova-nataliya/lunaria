@@ -1,15 +1,19 @@
 $( document ).ready(function() {
-    // $('.list-lang__link').click(function(e){
-    //     $('.list-lang__link').removeClass('active');
-    //     $(this).addClass('active');
-    // })
-    // $('.navigation__link').click(function(e){
-    //     $('.navigation__link').removeClass('active');
-    //     $(this).addClass('active');
-    // })
-    // $('.navigation__btn').click(function(e){
-    //     $('.navigation').toggleClass('active');
-    // })
+    
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+      $('#scroll').fadeIn();
+      } else {
+      $('#scroll').fadeOut();
+      }
+      });
+       
+      $('#scroll').click(function(){
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      return false;
+      });
+       
+
     $(function() {
         $('.tabs__btn').click(function(e){
             e.preventDefault();
@@ -23,11 +27,24 @@ $( document ).ready(function() {
         })
     });
 
-    // $('.slider').slick({
-    //     dots: true,
-    //     infinite: true,
-    //     arrows: false,
-    //     adaptiveHeight: true
-    //   });
+    $('.slider').slick({
+        dots: false,
+        infinite: true,
+        arrows: true,
+        prevArrow: '<i class="fa slider-arrows arrows-left fa-arrow-left"></i>',
+        nextArrow: '<i class="fa slider-arrows arrows-right fa-arrow-right"></i>',
+        slidesToShow: 2,
+        adaptiveHeight: true
+      });
+
+      $('.form__range').slider({
+        min: 500,
+        max: 25000,
+        value: 1250,
+        slide: function(event, ui){
+          $('.form__range-value').text(`$ ${ui.value}`);
+        }
+      });
+
 });
 
