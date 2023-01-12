@@ -60,15 +60,35 @@ body{
   width: 40%;
 }
 .layout{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.layout2{
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   align-items: start;
 }
+#scroll {   
+  display: flex;
+  flex-direction: column;    
+  width: 50px;   
+  height: 50px;   
+  text-align: center;       
+  position: fixed;   
+  bottom: 30px;   
+  right: 1vw;    
+  z-index: 1000; 
+} 
+#scroll:hover {   
+  cursor: pointer;   
+}  
+#scroll::before {
+  content: "\f062";
+  font-family: FontAwesome;
+  top: 0px;
+  left: 0px;
+  font-weight: lighter;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff; 
+}
+
 .header{
     margin: 0;
     min-height: 100vh;
@@ -402,30 +422,7 @@ body{
 
   }
 }
-#scroll {   
-  display: flex;
-  flex-direction: column;    
-  width: 50px;   
-  height: 50px;   
-  text-align: center;       
-  position: fixed;   
-  bottom: 30px;   
-  right: 1vw;    
-  z-index: 1000; 
-} 
-#scroll:hover {   
-  cursor: pointer;   
-}  
-#scroll::before {
-  content: "\f062";
-  font-family: FontAwesome;
-  top: 0px;
-  left: 0px;
-  font-weight: lighter;
-  font-size: 2em;
-  line-height: 50px;
-  color: #fff; 
-}  
+  
 .form{
   padding-bottom: 4%;
   border-bottom: 1px solid $white;
@@ -434,27 +431,24 @@ body{
   }
 
   &__input-holder{
-    width: 100%;
+    width: 75%;
     &_left{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      width: 100%;
     }
   }
   .form-input{
     color: white;
     background-color: transparent;
     height: calc(2.25rem + 2px);
-    display: block;
-    width: 80%;
-    margin-bottom: 2vw;
+    width: 100%;
+    margin-bottom: 3vw;
     border-top: none;
     border-left: none;
     border-right: none;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     &::placeholder {
       color: $white;
       opacity: 0.5;
+      font-size: 1vw;
     }
   }
 
@@ -464,12 +458,44 @@ body{
     color: $white;
     letter-spacing: 0.5ch;
     padding: 1.5vw 4.5vw;
+    font-size: 0.7vw;
     &:hover{
       cursor: pointer;
       background-color: rgba(255, 2555, 255, 0.3);
     }
   }
-
+  &__range-title{
+    display: block;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    margin-bottom: 1.2vw;
+  }
+  .range-holder{
+    display: flex;
+    margin-bottom: 2vw;
+  }
+  &__range{
+    margin-right: 1vw;
+  }
+  .ui-slider-handle {
+    outline: 0;
+    background: $white;
+    border-radius: 50%;
+    top: -.5em;
+  }
+  
+  .ui-slider-horizontal {
+    top: 1em;
+    height: .2em;
+    width: 40%;
+    border: none;
+    background: $white;
+    
+  }
+  &__range-value{
+    font-size: 1.25vw;
+    margin: 0.25vw 0;
+  }
 }
 .contact{
   padding-bottom: 4%;

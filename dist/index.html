@@ -6,12 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lunaria</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.main.js"></script>
+
   <script src="https://kit.fontawesome.com/d16d7400e1.js" crossorigin="anonymous"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/main.min.css">
 </head>
     <body>
@@ -149,7 +154,7 @@
                     <div class="side-text wow slideInRight">we combine sharp design with rich technology to craft exciting brands.
                     </div>
                 </div>
-                <div class="slider container">
+                <div class="slider container wow fadeIn">
                     <div class="slider__box">
                         <div class="img slider__photo slide1" style="background-image: url('./img/slide1.png')"></div>
                     </div>
@@ -177,7 +182,7 @@
                 </div>
             </section>
 
-            <section class="form">
+            <section class="form wow slideInUp">
                 <div class="holder text-holder">
                     <h5 class="side-title title wow slideInLeft">tell us about your project</h5>
                     <div class="side-text wow slideInRight">Since the launch of his eponymous jewelry line in 2000, Marco Bicego has redefined modern luxury with the launch of his eponymous jewelry line in 8u Marco Bicego has redefined modern luxury with sensuous,
@@ -187,8 +192,13 @@
                     <form action="">
                     <div class="layout">
                         <div class="form__input-holder">
-                            <input type="text" class="form__name form-input" placeholder="Your Name"> <label class="form__range-title" for="range">Your budget of project:</label> 
-                            <input class="form__range" type="range" min="1" max="100" value="50" id="range">
+                            <input type="text" class="form__name form-input" placeholder="Your Name"> 
+                            <label class="form__range-title" for="form__range">Your budget of project:</label> 
+                            <div class="range-holder">
+                                <div class="form__range"></div>
+                                <p class="form__range-value">$ 1250</p>
+                            </div>
+
                         </div>
                         <div class="form__input-holder form__input-holder_left">
                             <input type="text" class="form__name form-input" placeholder="Your Contact / Email or Phone with Messengers"> 
@@ -200,7 +210,7 @@
                 </div>
             </section>
 
-            <section class="contact">
+            <section class="contact wow zoomIn">
                 <div class="holder text-holder">
                     <h5 class="side-title title wow slideInLeft">Contact US</h5>
                     <div class="side-text wow slideInRight">If you have any questions, please contact us. 
@@ -208,7 +218,7 @@
                     </div>
                     
                 </div>
-                <div class="layout2 holder">
+                <div class="layout holder">
                     <div class="contact__holder">
                         <a class="contact__mail" href="mailto:Lunaria@gmail.com">Lunaria@gmail.com</a>
                         <a class="contact__tel main-link" href="tel:+320873467911">+32 087 3467 911</a>

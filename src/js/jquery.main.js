@@ -36,5 +36,15 @@ $( document ).ready(function() {
         slidesToShow: 2,
         adaptiveHeight: true
       });
+
+      $('.form__range').slider({
+        min: 500,
+        max: 25000,
+        value: 1250,
+        slide: function(event, ui){
+          $('.form__range-value').text(`$ ${ui.value}`);
+        }
+      });
+
 });
 
