@@ -137,8 +137,10 @@ body{
   }
   @media screen and (max-width:767px){
     margin-bottom: 4vw;
-    width: 15px;   
-    height: 15px; 
+    width: 10px;   
+    height: 10px; 
+    bottom: 40px;   
+    right: 5vw; 
   }
 } 
 #scroll:hover {   
@@ -772,6 +774,11 @@ body{
     background: $white;
     border-radius: 50%;
     top: -.5em;
+    @media screen and (max-width:767px){
+      height: 0.5em;
+      width: 0.5em;
+      top: -0.15em;
+    }
   }
   
   .ui-slider-horizontal {
@@ -792,6 +799,9 @@ body{
     @media screen and (max-width:1023px){
       font-size: 1.8vw;
       margin: 0.8vw 0;
+    }
+    @media screen and (max-width:767px){
+      margin: 2.2vw 0;
     }
   }
 }
