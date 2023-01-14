@@ -126,6 +126,20 @@ body{
   bottom: 30px;   
   right: 1vw;    
   z-index: 1000; 
+  @media screen and (max-width:1439px) {
+    width: 40px;   
+    height: 40px; 
+  }
+  @media screen and (max-width:1023px){
+    margin-bottom: 4vw;
+    width: 30px;   
+    height: 30px; 
+  }
+  @media screen and (max-width:767px){
+    margin-bottom: 4vw;
+    width: 15px;   
+    height: 15px; 
+  }
 } 
 #scroll:hover {   
   cursor: pointer;   
@@ -560,7 +574,7 @@ body{
     position: absolute;
     background: linear-gradient(0deg, rgba(42, 30, 175, 0.9) 15%, rgba(0, 0, 0, 0) 50%);
     @media screen and (max-width:767px){
-      width: 51%;
+      width: 53%;
       right: 24.5%;
     }
   }
@@ -897,7 +911,7 @@ body{
       font-size: 1.6vw;
     }
     @media screen and (max-width:767px){
-      font-size: 3vw; 
+      margin: 1vw 0.5vw 1vw 0;
     }
   }
   &__link{
@@ -907,6 +921,14 @@ body{
     position: relative;
     &::before {
       bottom: 0vw;
+    }
+    @media screen and (max-width:1439px){
+      font-size: 1.6vw;
+    }
+  }
+  &__text{
+    @media screen and (max-width:1439px){
+      font-size: 1.6vw;
     }
   }
 }
