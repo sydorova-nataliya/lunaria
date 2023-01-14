@@ -12,7 +12,7 @@ body{
     position: absolute;
     left: 0; bottom: 14px;
     width: 0%;
-    height: 1.5px;
+    height: 0.1vw;
     background-color: $white;
     transition: width 0.5s;
   }
@@ -22,6 +22,15 @@ body{
 }
 .container{
   padding: 0 7vw;
+  @media screen and (max-width:1439px){
+    padding: 0 5vw;
+  }
+  @media screen and (max-width:1023px){
+    padding: 0 3vw;
+  }
+  @media screen and (max-width:767px){
+    padding: 0 1vw;
+  }
 }
 .wrapper{
   padding-left: 15vw;
@@ -37,10 +46,31 @@ body{
   letter-spacing: 2px;
   font-size: 3vw;
   margin: 10% 5% 1% 0;
+  @media screen and (max-width:1439px){
+    font-size: 4vw;
+}
+  @media screen and (max-width:1023px){
+    font-size: 5.5vw;
+  }
+  @media screen and (max-width:767px){
+    font-size: 7vw;
+  }
 }
 .holder{
   padding-left: 22vw;
   padding-right: 4vw;
+  @media screen and (max-width:1439px) {
+    padding-left: 10vw;
+    padding-right: 2.5vw;
+  }
+  @media screen and (max-width:1023px){
+    padding-left: 5vw;
+    padding-right: 1.5vw;
+  }
+  @media screen and (max-width:767px){
+    padding-left: 3vw;
+    padding-right: 0.5vw;
+  }
 }
 .img{
   background-size: cover;
@@ -50,14 +80,36 @@ body{
   display: flex;
   justify-content: space-between;
   margin: 5% 0 0 0;
+  @media screen and (max-width:1023px){
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 .side-text{
     width: 40%;
     font-size: 1vw;
+    @media screen and (max-width:1439px){
+      font-size: 1.4vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 2vw;
+      width: 100%;
+    }
+    @media screen and (max-width:767px){
+      font-size: 3vw; 
+    }
 }
 .side-title{
   margin:  0;
   width: 40%;
+  @media screen and (max-width:1439px) {
+    width: 45%;
+  }
+  @media screen and (max-width:1023px){
+    margin-bottom: 4vw;
+    width: 100%;
+  }
+
 }
 .layout{
   display: grid;
@@ -97,7 +149,6 @@ body{
     border-bottom: 1px solid $white;
     text-align: end;
     padding: 5px 30px 5px 0;
-    position: relative;
     margin: 0 0 4% 0;
   }
 
@@ -109,8 +160,19 @@ body{
     &_blue{
       color: $blue;
     }
+    &::before {
+      bottom:  1vw;
+    }
+    @media screen and (max-width:1439px){
+      font-size: 1.5vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 2vw;
+    }
+    @media screen and (max-width:767px){
+      font-size: 3vw;
+    }
   }
-
   &__shadow_blue{
     top: -77vw;
     right: -17vw;
@@ -127,7 +189,6 @@ body{
     right: -26vw;
     z-index: -1;
   }
-
   &__logo{
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -136,25 +197,63 @@ body{
     &::before {
       bottom: 0px;
     }
+    @media screen and (max-width:1439px){
+      font-size: 2.5vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 3vw;
+    }
+    @media screen and (max-width:767px){
+      font-size: 4vw;
+    }
   }
   &__signature{
     font-weight: normal;
     font-size: 0.8vw;
     margin: 1% 0 0 0 ;
+    @media screen and (max-width:1439px){
+      font-size: 1.2vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 1.5vw;
+    }
+    @media screen and (max-width:767px){
+      font-size: 2vw;
+    }
   }
-
+  .wrapper-title{
+    min-height: 65vh;
+  }
   .title-holder{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+  }
+  &__title{
+    margin: 0 5.5vw 0 0;
+    @media screen and (max-width:1023px){
+      margin: 0 2.5vw 0 0;
+    }
+    @media screen and (max-width:767px){
+      margin: 0 1.5vw 0 0;
+    }
   }
   &__subtitle{
     text-transform: uppercase;
     font-size: 1.2vw;
     font-weight: normal;
     font-family: 'Marcellus', serif;
+    @media screen and (max-width:1439px){
+      font-size: 1.7vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 2vw;
+    }
+    @media screen and (max-width:767px){
+      font-size: 3vw;
+    }
   }
 }
-
 
 .info{
   position: relative;
@@ -162,7 +261,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    margin-bottom: 2vw;
     &__title{
       color: $white;
       text-transform: uppercase;  
@@ -175,11 +274,20 @@ body{
         content: '';
         bottom: -2px;
       }
+      @media screen and (max-width:1439px){
+        font-size: 1.4vw;
+      }
+      @media screen and (max-width:1023px){
+        font-size: 2vw;
+      }
+      @media screen and (max-width:767px){
+        font-size: 2.5vw;
+      }
     }
   }
   &__shadow_blue{
     top: -20%;
-    right: -70%;
+    right: -80%;
     width: 100vw;
     height: 60vw;
     opacity: 0.2;
@@ -202,15 +310,42 @@ body{
     &__title{
       font-size: 2.8vw;
       text-transform: uppercase;
+      @media screen and (max-width:1439px){
+        font-size: 3.2vw;
+      }
+      @media screen and (max-width:1023px){
+        font-size: 3.75vw;
+      }
+      @media screen and (max-width:767px){
+        font-size: 4.3vw;
+      }
     }
     &__text{
       font-size: 1.1vw;
+      @media screen and (max-width:1439px){
+        font-size: 1.4vw;
+      }
+      @media screen and (max-width:1023px){
+        font-size: 1.8vw;
+      }
+      @media screen and (max-width:767px){
+        font-size: 2.3vw;
+      }
     }
     &__wrapper{
       display: grid;
       grid-template-columns: 1fr 1fr;
       padding-left: 14vw;
       align-items: center;
+      @media screen and (max-width:1439px){
+        padding-left: 8vw;
+      }
+      @media screen and (max-width:1023px){
+        padding-left: 5vw;
+      }
+      @media screen and (max-width:767px){
+        padding-left: 2vw;
+      }
     }
     &__number{
       opacity: 0.5;
@@ -218,6 +353,12 @@ body{
       font-weight: bold;
       margin-bottom: 3vw;
       font-size: 0.7vw;
+      @media screen and (max-width:1439px){
+        font-size: 1.1vw;
+      }
+      @media screen and (max-width:767px){
+        font-size: 1.5vw;
+      }
     }
     &__item{
       border-top: 1px solid $main-grey;
@@ -240,13 +381,25 @@ body{
 .tabs{
   border-bottom: 1px solid $white;
   padding: 5vw 6.5vw 4vw ;
+  @media screen and (max-width:1439px){
+    padding: 5vw 4.5vw 4vw ;
+  }
+  @media screen and (max-width:1023px){
+    padding: 5vw 2vw 4vw ;
+  }
+  @media screen and (max-width:767px){
+    padding: 5vw 1vw 4vw ;
+  }
   &__tabset{
     @include list;
     display: flex;
     justify-content: space-between;
   }
   &__item{
-    margin-bottom: 1vw;
+    @media screen and (max-width:767px){
+      min-width: 10% ;
+    }
+
   }
   &__btn{
     font-family: 'Marcellus', serif;
@@ -254,6 +407,15 @@ body{
     color: $main-grey;
     font-size: 1.5vw;
     position: relative;
+    @media screen and (max-width:1439px){
+      font-size: 2vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 2.4vw;
+    }
+    @media screen and (max-width:767px){
+      font-size: 3vw;
+    }
     &::before{
       content: '+';
       position: absolute;
@@ -272,6 +434,7 @@ body{
     &:hover::after {
       width: 100%;
     }
+
   }
   &__btn.active{
     color: $white;
@@ -287,18 +450,44 @@ body{
     display: none;
   }
   &__content.active{
+    margin-top: 2vw;
     display: block;
     width: 15vw;
     font-size: 1vw;
+    @media screen and (max-width:1439px){
+      font-size: 1.4vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 1.8vw;
+       width: 20vw;
+    }
+    @media screen and (max-width:767px){
+      font-size: 2.3vw;
+    }
   }
   &__content.active:nth-child(2){
-    transform: translate(17.4vw,0);
+    transform: translate(22.4vw,0);
+    @media screen and (max-width:1439px){
+      transform: translate(20.4vw,0);
+    }
+    @media screen and (max-width:767px){
+      transform: translate(18.4vw,0);
+    }
   }
   &__content.active:nth-child(3){
-    transform: translate(36.6vw,0);
+    transform: translate(44.8vw,0);
+    @media screen and (max-width:1439px){
+      transform: translate(43vw,0);
+    }
+    @media screen and (max-width:767px){
+      transform: translate(38.4vw,0);
+    }
   }
   &__content.active:nth-child(4){
-    transform: translate(71.7vw,0);
+    transform: translate(67.7vw,0);
+    @media screen and (max-width:1439px){
+      transform: translate(71.7vw,0);
+  }
   }
   &__holder{
     display: grid;
@@ -310,6 +499,7 @@ body{
   overflow: visible;
   padding-bottom: 4%;
   border-bottom: 1px solid $white;
+
   &__link{
     position: relative;
     &::before {
@@ -330,17 +520,36 @@ body{
     display: flex;
     justify-content: space-between;
     margin-top: 3%;
+    @media screen and (max-width:767px){
+      display: grid;
+      grid-template-columns: 1fr;
+    }
   }
   &__item{
     position: relative;
   }
   .img{
-    height: 20vw;
+    height: 22vw;
     width: 15vw;
+    justify-self: center;
     z-index: -2;
+    @media screen and (max-width:1439px){
+      height: 27vw;
+      width: 20vw;
+    }
+    @media screen and (max-width:1023px){
+      height: 32vw;
+      width: 25vw;
+    }
+    @media screen and (max-width:767px){
+      height: 58vw;
+      width: 47vw;
+      margin-top: 3vw;
+    }
   }
   .gradient {
     margin: 0;
+    display: grid;
   }
   .gradient::before {
     content: '';
@@ -350,6 +559,10 @@ body{
     display: inline-block;
     position: absolute;
     background: linear-gradient(0deg, rgba(42, 30, 175, 0.9) 15%, rgba(0, 0, 0, 0) 50%);
+    @media screen and (max-width:767px){
+      width: 51%;
+      right: 24.5%;
+    }
   }
   &__name{
     position: absolute;
@@ -358,6 +571,19 @@ body{
     left: -1vw;
     letter-spacing: 1px;
     font-size: 1vw;
+    @media screen and (max-width:1439px){
+      font-size: 1.3vw;
+      bottom: 2.8vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 2.5vw;
+      bottom: 4vw;
+    }
+    @media screen and (max-width:767px){
+      font-size:4.5vw;
+      bottom: 7vw;
+      left: 20%;
+    }
   }
   &__job{
     position: absolute;
@@ -366,6 +592,16 @@ body{
     left: -1vw;
     letter-spacing: 1px;
     font-size: 0.8vw;
+    @media screen and (max-width:1439px){
+      font-size: 1.1vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 1.7vw;
+    }
+    @media screen and (max-width:767px){
+      left: 20%;
+      font-size: 3vw;
+    }
   }
 }
 .projects{
@@ -382,6 +618,9 @@ body{
       margin: -2vw 2vw 0 2vw; 
       z-index: 2; 
       cursor: pointer;
+      @media screen and (max-width:767px){
+        margin: 0;
+      }
     }
     .arrows-left{
       left: 0; 
@@ -399,10 +638,22 @@ body{
         content: '';
         bottom: -0.2vw;
       }
+      @media screen and (max-width:1439px){
+        font-size: 1.6vw;
+      @media screen and (max-width:1023px){
+        font-size: 2.2vw;
+      }
+    }
     }
     &__text{
       font-size: 1vw;
       color: $light-grey;
+      @media screen and (max-width:1439px){
+        font-size: 1.4vw;
+      @media screen and (max-width:1023px){
+        font-size: 2vw;
+      }
+    }
     }
     .slick-slide{ 
       margin: 0 2vw;
@@ -418,6 +669,11 @@ body{
     }
     .slide4{
       height: 18vw;
+    }
+    &__photo, .slide2, .slide3, .slide4{
+      @media screen and (max-width:1023px){
+        height: 60vw;
+    }
     }
 
   }
@@ -435,6 +691,7 @@ body{
     &_left{
       width: 100%;
     }
+
   }
   .form-input{
     color: white;
@@ -449,6 +706,12 @@ body{
       color: $white;
       opacity: 0.5;
       font-size: 1vw;
+      @media screen and (max-width:1439px){
+        font-size: 1.25vw;
+      }
+      @media screen and (max-width:1023px){
+        font-size: 1.4vw;
+      }
     }
   }
 
@@ -463,12 +726,24 @@ body{
       cursor: pointer;
       background-color: rgba(255, 2555, 255, 0.3);
     }
+    @media screen and (max-width:1439px){
+      font-size: 1vw;
+    }
+    @media screen and (max-width:1023px){
+        font-size: 1.4vw;
+    }
   }
   &__range-title{
     display: block;
     font-size: 1.2vw;
     text-transform: uppercase;
     margin-bottom: 1.2vw;
+    @media screen and (max-width:1439px){
+      font-size: 1.4vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 1.8vw;
+    }
   }
   .range-holder{
     display: flex;
@@ -476,6 +751,7 @@ body{
   }
   &__range{
     margin-right: 1vw;
+    
   }
   .ui-slider-handle {
     outline: 0;
@@ -495,6 +771,14 @@ body{
   &__range-value{
     font-size: 1.25vw;
     margin: 0.25vw 0;
+    @media screen and (max-width:1439px){
+      font-size: 1.5vw;
+      margin: 0.8vw 0;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 1.8vw;
+      margin: 0.8vw 0;
+    }
   }
 }
 .contact{
@@ -510,16 +794,40 @@ body{
     }
   }
   &__mail{
-    text-decoration: underline;
+    position: relative;
     text-transform: uppercase;
     font-size: 1.2vw;
     margin-bottom: 1vw;
-    &:hover{
-      text-decoration: none;
+    @media screen and (max-width:1439px){
+      font-size: 1.3vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 2vw;
+    }
+    &::before {
+      bottom: -0.2vw;
+      width: 31%;
+    }
+    &:hover::before {
+      width: 0%;
     }
   }
   &__tel{
+    position: relative;
     font-size: 1vw;
+    @media screen and (max-width:1439px){
+      font-size: 1.3vw;
+    }
+    @media screen and (max-width:1023px){
+      font-size: 2vw;
+    }
+    &::before {
+      bottom: -0.2vw;
+      width: 0%;
+    }
+    &:hover::before {
+      width: 18.5%;
+    }
   }
   &__adress{
     font-style: normal;
@@ -534,6 +842,13 @@ body{
     font-size: 1.5vw;
     top: -2vw;
     left: 0;
+    @media screen and (max-width:1439px){
+      font-size: 1.8vw;
+      top: -3vw;
+  }
+    @media screen and (max-width:1023px){
+      font-size: 2.2vw;
+  }
   }
   .icon{
     font-size: 1.1vw;
@@ -541,10 +856,22 @@ body{
     &:hover{
       transform: scale(1.5);
     }
+    @media screen and (max-width:1439px){
+      font-size: 1.5vw;
+  }
+    @media screen and (max-width:1023px){
+      font-size: 1.8vw;
+  }
   }
   &__list-title{
     text-transform: uppercase;
     font-size: 1.2vw;
+    @media screen and (max-width:1439px){
+      font-size: 1.5vw;
+  }
+    @media screen and (max-width:1023px){
+      font-size: 1.8vw;
+  }
   }
   &__list{
     @include list;
@@ -566,14 +893,20 @@ body{
     &::before {
       bottom: 1.2vw;
     }
+    @media screen and (max-width:1439px){
+      font-size: 1.6vw;
+    }
+    @media screen and (max-width:767px){
+      font-size: 3vw; 
+    }
   }
   &__link{
     font-weight: bold;
-    text-decoration: underline;
     text-transform: uppercase;
     margin-right: 1vw;
-    &:hover{
-      text-decoration:none;
+    position: relative;
+    &::before {
+      bottom: 0vw;
     }
   }
 }

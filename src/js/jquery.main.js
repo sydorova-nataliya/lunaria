@@ -34,7 +34,21 @@ $( document ).ready(function() {
         prevArrow: '<i class="fa slider-arrows arrows-left fa-arrow-left"></i>',
         nextArrow: '<i class="fa slider-arrows arrows-right fa-arrow-right"></i>',
         slidesToShow: 2,
-        adaptiveHeight: true
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false,
+              
+            }
+          },
+        ]
       });
 
       $('.form__range').slider({
