@@ -3,7 +3,7 @@ body{
   color: $white;
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
-  margin: 1vw 15px;
+  margin: 1.2vw 1.5vw 0 1.5vw;
 }
 
 .main-link{
@@ -20,8 +20,9 @@ body{
     width: 100%;
   }
 }
+
 .container{
-  padding: 0 7vw;
+  padding: 0 3.2vw 0 3.3vw;
   @media screen and (max-width:1439px){
     padding: 0 5vw;
   }
@@ -33,7 +34,7 @@ body{
   }
 }
 .wrapper{
-  padding-left: 15vw;
+  padding-left: 14.5vw;
 }
 .shadow{
   position: absolute;
@@ -57,8 +58,8 @@ body{
   }
 }
 .holder{
-  padding-left: 22vw;
-  padding-right: 4vw;
+  padding-left: 18vw;
+  padding-right: 3.1vw;
   @media screen and (max-width:1439px) {
     padding-left: 10vw;
     padding-right: 2.5vw;
@@ -79,15 +80,16 @@ body{
 .text-holder{
   display: flex;
   justify-content: space-between;
-  margin: 5% 0 0 0;
+  margin: 8% 0 0 0;
   @media screen and (max-width:1023px){
     display: grid;
     grid-template-columns: 1fr;
   }
 }
 .side-text{
-    width: 40%;
-    font-size: 1vw;
+    width: 44%;
+    font-size: 1.3vw;
+    line-height: 2vw;
     @media screen and (max-width:1439px){
       font-size: 1.4vw;
     }
@@ -102,6 +104,7 @@ body{
 .side-title{
   margin:  0;
   width: 40%;
+  letter-spacing: 0.25ch;
   @media screen and (max-width:1439px) {
     width: 45%;
   }
@@ -159,25 +162,28 @@ body{
 
 .header{
     margin: 0;
-    min-height: 100vh;
+    min-height: 97.7vh;
   .header-holder{
     border-top: 1px solid $white;
     border-bottom: 1px solid $white;
     text-align: end;
-    padding: 5px 30px 5px 0;
-    margin: 0 0 4% 0;
+    padding: 5px 0 5px 0;
+    margin: 0 0 3.8% 0;
   }
-
+  .container-header{
+    padding: 0 6vw;
+  }
   &__inscription{
     display: inline-block;
     color: $yellow;
     position: relative;
-    font-size: 1vw;
+    font-size: 1.125vw;
+    letter-spacing: 0.06ch;
     &_blue{
       color: $blue;
     }
     &::before {
-      bottom:  1vw;
+      bottom:  1.1vw;
     }
     @media screen and (max-width:1439px){
       font-size: 1.5vw;
@@ -207,9 +213,10 @@ body{
   }
   &__logo{
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 1.05ch;
     font-size: 2vw;
     position: relative;
+    font-weight: bold;
     &::before {
       bottom: 0px;
     }
@@ -223,10 +230,14 @@ body{
       font-size: 4vw;
     }
   }
+  .indent{
+    margin-right: 0.7%;
+  }
   &__signature{
     font-weight: normal;
-    font-size: 0.8vw;
-    margin: 1% 0 0 0 ;
+    font-size: 0.7vw;
+    margin: 0.6% 0 0 0 ;
+    letter-spacing: 0.15ch;
     @media screen and (max-width:1439px){
       font-size: 1.2vw;
     }
@@ -246,7 +257,10 @@ body{
     justify-content: center;
   }
   &__title{
-    margin: 0 5.5vw 0 0;
+    margin: 3.5vw 5.5vw 0 0;
+    font-size: 3.5vw;
+    line-height: 4.7vw;
+    letter-spacing: 0.12ch;
     @media screen and (max-width:1023px){
       margin: 0 2.5vw 0 0;
     }
@@ -256,9 +270,11 @@ body{
   }
   &__subtitle{
     text-transform: uppercase;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     font-weight: normal;
     font-family: 'Marcellus', serif;
+    margin-top: 3vw;
+    letter-spacing: 0.04ch;
     @media screen and (max-width:1439px){
       font-size: 1.7vw;
     }
@@ -277,14 +293,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2vw;
+    margin-bottom: 2.5vw;
+    letter-spacing: 0.3ch;
     &__title{
       color: $white;
       text-transform: uppercase;  
       position: relative;
       font-size: 1vw;
       &_last{
-        margin-left: 2vw;
+        margin-left: 2.5vw;
       }
       &::before {
         content: '';
@@ -322,10 +339,33 @@ body{
 
   .card-list{
     @include list;
-    margin-top: 1vw;
+    margin: 1vw 0 0 0;
+    &__item{
+      border-top: 1px solid $main-grey;
+      border-bottom: 1px solid $main-grey;
+      min-height: 365px;
+      &:first-child{
+        border-top: 1px solid $white;
+        .card-list__number{
+           margin-bottom: 4.7vw;
+        }
+      }
+      &:last-child{
+        border-bottom: 1px solid $white;
+        .card-list__number{
+          margin-bottom: 8vw;
+       }
+      }
+    }
+    &__holder{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     &__title{
-      font-size: 2.8vw;
+      font-size: 3vw;
       text-transform: uppercase;
+      letter-spacing: 0.15ch;
       @media screen and (max-width:1439px){
         font-size: 3.2vw;
       }
@@ -337,7 +377,7 @@ body{
       }
     }
     &__text{
-      font-size: 1.1vw;
+      font-size: 1.3vw;
       @media screen and (max-width:1439px){
         font-size: 1.4vw;
       }
@@ -350,8 +390,8 @@ body{
     }
     &__wrapper{
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding-left: 14vw;
+      grid-template-columns: 1.275fr 1fr;
+      padding-left: 13.2vw;
       align-items: center;
       @media screen and (max-width:1439px){
         padding-left: 8vw;
@@ -367,8 +407,8 @@ body{
       opacity: 0.5;
       font-style: italic;
       font-weight: bold;
-      margin-bottom: 3vw;
-      font-size: 0.7vw;
+      font-size: 1.3vw;
+      margin-bottom: 9vw;
       @media screen and (max-width:1439px){
         font-size: 1.1vw;
       }
@@ -376,27 +416,13 @@ body{
         font-size: 1.5vw;
       }
     }
-    &__item{
-      border-top: 1px solid $main-grey;
-      border-bottom: 1px solid $main-grey;
-      &:first-child{
-        border-top: 1px solid $white;
-      }
-      &:last-child{
-        border-bottom: 1px solid $white;
-      }
-    }
-    &__holder{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+
   }
 }
 
 .tabs{
   border-bottom: 1px solid $white;
-  padding: 5vw 6.5vw 4vw ;
+  padding: 7.3vw 6.5vw 8vw 6.5vw;
   @media screen and (max-width:1439px){
     padding: 5vw 4.5vw 4vw ;
   }
@@ -421,7 +447,7 @@ body{
     font-family: 'Marcellus', serif;
     text-transform: uppercase;
     color: $main-grey;
-    font-size: 1.5vw;
+    font-size: 2vw;
     position: relative;
     @media screen and (max-width:1439px){
       font-size: 2vw;
@@ -469,7 +495,7 @@ body{
     margin-top: 2vw;
     display: block;
     width: 15vw;
-    font-size: 1vw;
+    font-size: 1.3vw;
     @media screen and (max-width:1439px){
       font-size: 1.4vw;
     }
@@ -482,7 +508,7 @@ body{
     }
   }
   &__content.active:nth-child(2){
-    transform: translate(22.4vw,0);
+    transform: translate(18.4vw,0);
     @media screen and (max-width:1439px){
       transform: translate(20.4vw,0);
     }
@@ -491,7 +517,7 @@ body{
     }
   }
   &__content.active:nth-child(3){
-    transform: translate(44.8vw,0);
+    transform: translate(39.5vw,0);
     @media screen and (max-width:1439px){
       transform: translate(43vw,0);
     }
@@ -500,7 +526,7 @@ body{
     }
   }
   &__content.active:nth-child(4){
-    transform: translate(67.7vw,0);
+    transform: translate(66.5vw,0);
     @media screen and (max-width:1439px){
       transform: translate(71.7vw,0);
   }
@@ -512,12 +538,16 @@ body{
 }
 
 .about{
+  .container{
+    padding: 0 7.5vw 2.7vw 8vw;
+  }
   overflow: visible;
   padding-bottom: 4%;
   border-bottom: 1px solid $white;
 
   &__link{
     position: relative;
+    font-size: 1vw;
     &::before {
       content: '';
       position: absolute;
@@ -535,7 +565,7 @@ body{
     @include list;
     display: flex;
     justify-content: space-between;
-    margin-top: 3%;
+    margin-top: 6%;
     @media screen and (max-width:767px){
       display: grid;
       grid-template-columns: 1fr;
@@ -545,8 +575,8 @@ body{
     position: relative;
   }
   .img{
-    height: 22vw;
-    width: 15vw;
+    height: 29vw;
+    width: 20vw;
     justify-self: center;
     z-index: -2;
     @media screen and (max-width:1439px){
@@ -583,10 +613,10 @@ body{
   &__name{
     position: absolute;
     z-index: 20;
-    bottom: 2.5vw;
-    left: -1vw;
-    letter-spacing: 1px;
-    font-size: 1vw;
+    bottom: 5.75vw;
+    left: -2.2vw;
+    letter-spacing: 0.1ch;
+    font-size: 2vw;
     @media screen and (max-width:1439px){
       font-size: 1.3vw;
       bottom: 2.8vw;
@@ -604,10 +634,10 @@ body{
   &__job{
     position: absolute;
     z-index: 20;
-    bottom: 1vw;
-    left: -1vw;
+    bottom: 3.1vw;
+    left: -2.2vw;
     letter-spacing: 1px;
-    font-size: 0.8vw;
+    font-size: 1.1vw;
     @media screen and (max-width:1439px){
       font-size: 1.1vw;
     }
@@ -621,22 +651,30 @@ body{
   }
 }
 .projects{
-  padding-bottom: 4%;
+  padding-bottom: 4.3%;
   border-bottom: 1px solid $white;
   .text-holder{
-    margin-bottom:3vw;
+    margin-bottom:7.5vw;
+  }
+  .side-title{
+    margin-top: 0.9vw;
+    letter-spacing: 0.15ch;
   }
   .slider{
     position: relative;
     .slick-arrow{
       position: absolute;
       top: 50%; 
-      margin: -2vw 2vw 0 2vw; 
+      margin: -5.7vw 2vw 0 2vw; 
       z-index: 2; 
       cursor: pointer;
       @media screen and (max-width:767px){
         margin: 0;
       }
+    }
+    &__text-holder{
+      margin: 2.7vw 0 0 2.4vw;
+      width: 60%;
     }
     .arrows-left{
       left: 0; 
@@ -644,12 +682,35 @@ body{
     .arrows-right{
       right: 0; 
     }
-    &__text-holder{
-      margin: 1.5vw 0 0 2vw;
+
+    .slick-slide{ 
+      margin: 0 2.9vw 0 5vw;
     }
+    &__photo{
+      height: 37vw;
+    }
+    .slide2{
+      height: 29vw;
+    }
+    .slide3{
+      height: 25.2vw;
+      margin: 0.8vw 1.9vw 2.7vw -1.5vw;
+    }
+    .slide4{
+      height: 28vw;
+    }
+    &__photo, .slide2, .slide3, .slide4{
+      @media screen and (max-width:1023px){
+        height: 60vw;
+    }
+    }
+
     &__main-link{
-      font-size: 1.4vw;
+      font-size: 1.5vw;
       position: relative;
+      font-weight: bold;
+      letter-spacing: 0.13ch;
+      margin: 0 0 3vw 0;
       &::before {
         content: '';
         bottom: -0.2vw;
@@ -664,6 +725,8 @@ body{
     &__text{
       font-size: 1vw;
       color: $light-grey;
+      margin: 1.4vw 0 0 0;
+      line-height: 1.55vw;
       @media screen and (max-width:1439px){
         font-size: 1.4vw;
       @media screen and (max-width:1023px){
@@ -671,57 +734,45 @@ body{
       }
     }
     }
-    .slick-slide{ 
-      margin: 0 2vw;
-    }
-    &__photo{
-      height: 27vw;
-    }
-    .slide2{
-      height: 24vw;
-    }
-    .slide3{
-      height: 21vw;
-    }
-    .slide4{
-      height: 18vw;
-    }
-    &__photo, .slide2, .slide3, .slide4{
-      @media screen and (max-width:1023px){
-        height: 60vw;
-    }
-    }
-
   }
 }
   
 .form{
-  padding-bottom: 4%;
+  padding: 1.6vw 0 7.6% 0;
   border-bottom: 1px solid $white;
   .text-holder{
-    margin-bottom:3vw;
+    margin-bottom:7.4vw;
   }
-
+  .side-title{
+    line-height: 4.6vw;
+  }
+  .side-text{
+    margin-top: -0.6vw;
+  }
   &__input-holder{
-    width: 75%;
+    width: 78%;
     &_left{
       width: 100%;
     }
+  }
 
+  .layout{
+    grid-template-columns: 1.268fr 1fr;
   }
   .form-input{
     color: white;
     background-color: transparent;
     height: calc(2.25rem + 2px);
     width: 100%;
-    margin-bottom: 3vw;
+    margin-bottom: 4.5vw;
+    padding: 2vw 0;
     border-top: none;
     border-left: none;
     border-right: none;
     &::placeholder {
       color: $white;
       opacity: 0.5;
-      font-size: 1vw;
+      font-size: 1.2vw;
       @media screen and (max-width:1439px){
         font-size: 1.25vw;
       }
@@ -731,29 +782,12 @@ body{
     }
   }
 
-  &__btn{
-    background-color: rgba(255, 2555, 255, 0.09);
-    border: none;
-    color: $white;
-    letter-spacing: 0.5ch;
-    padding: 1.5vw 4.5vw;
-    font-size: 0.7vw;
-    &:hover{
-      cursor: pointer;
-      background-color: rgba(255, 2555, 255, 0.3);
-    }
-    @media screen and (max-width:1439px){
-      font-size: 1vw;
-    }
-    @media screen and (max-width:1023px){
-        font-size: 1.4vw;
-    }
-  }
   &__range-title{
     display: block;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     text-transform: uppercase;
-    margin-bottom: 1.2vw;
+    margin:1.1vw 0 3vw 0;
+    letter-spacing: 0.17ch;
     @media screen and (max-width:1439px){
       font-size: 1.4vw;
     }
@@ -763,10 +797,10 @@ body{
   }
   .range-holder{
     display: flex;
-    margin-bottom: 2vw;
+    margin-bottom: 8vw;
   }
   &__range{
-    margin-right: 1vw;
+    margin-right: 2.5vw;
     
   }
   .ui-slider-handle {
@@ -783,14 +817,14 @@ body{
   
   .ui-slider-horizontal {
     top: 1em;
-    height: .2em;
-    width: 40%;
+    height: .1em;
+    width: 38%;
     border: none;
     background: $white;
     
   }
   &__range-value{
-    font-size: 1.25vw;
+    font-size: 1.4vw;
     margin: 0.25vw 0;
     @media screen and (max-width:1439px){
       font-size: 1.5vw;
@@ -804,11 +838,33 @@ body{
       margin: 2.2vw 0;
     }
   }
+  &__btn{
+    background-color: rgba(255, 2555, 255, 0.09);
+    border: none;
+    color: $white;
+    letter-spacing: 0.5ch;
+    padding: 2.7vw 8.3vw;
+    font-size: 1vw;
+    &:hover{
+      cursor: pointer;
+      background-color: rgba(255, 2555, 255, 0.3);
+    }
+    @media screen and (max-width:1439px){
+      font-size: 1vw;
+    }
+    @media screen and (max-width:1023px){
+        font-size: 1.4vw;
+    }
+  }
 }
 .contact{
-  padding-bottom: 4%;
+  padding-bottom: 8%;
   .text-holder{
-    padding-bottom: 5vw;
+    padding-bottom: 8vw;
+    padding-top: 1.3vw;
+  }
+  .layout{
+    grid-template-columns: 1.268fr 1fr;
   }
   &__holder{
     display: grid;
@@ -817,11 +873,15 @@ body{
       position: relative;
     }
   }
+  .side-text{
+    margin-top: -0.9vw;
+  }
   &__mail{
     position: relative;
     text-transform: uppercase;
-    font-size: 1.2vw;
+    font-size: 1.6vw;
     margin-bottom: 1vw;
+    letter-spacing: 0.07ch;
     @media screen and (max-width:1439px){
       font-size: 1.3vw;
     }
@@ -829,8 +889,8 @@ body{
       font-size: 2vw;
     }
     &::before {
-      bottom: -0.2vw;
-      width: 31%;
+      bottom: 0.2vw;
+      width: 42%;
     }
     &:hover::before {
       width: 0%;
@@ -838,7 +898,8 @@ body{
   }
   &__tel{
     position: relative;
-    font-size: 1vw;
+    font-size: 1.5vw;
+    letter-spacing: 0.18ch;
     @media screen and (max-width:1439px){
       font-size: 1.3vw;
     }
@@ -846,36 +907,59 @@ body{
       font-size: 2vw;
     }
     &::before {
-      bottom: -0.2vw;
+      bottom: 0.2vw;
       width: 0%;
     }
     &:hover::before {
-      width: 18.5%;
+      width: 32%;
     }
-  }
-  &__adress{
-    font-style: normal;
-    font-size: 1.8vw;
-    text-transform: uppercase;
-    letter-spacing: 0.2ch;
-    margin-bottom: 1vw;
   }
   .position{
     position: absolute;
     color: $white;
     font-size: 1.5vw;
-    top: -2vw;
+    top: -3.7vw;
     left: 0;
+      @media screen and (max-width:1439px){
+        font-size: 1.8vw;
+        top: -3vw;
+    }
+      @media screen and (max-width:1023px){
+        font-size: 2.2vw;
+    }
+  }
+  &__adress{
+    font-style: normal;
+    font-size: 2vw;
+    text-transform: uppercase;
+    letter-spacing: 0.2ch;
+    line-height: 3vw;
+    margin: -0.9vw 0 4vw 0;
+  }
+
+  &__list-title{
+    text-transform: uppercase;
+    font-size: 1.4vw;
+    letter-spacing: 0.2ch;
+    font-weight: bold;
+    margin-bottom: 2.1vw;
     @media screen and (max-width:1439px){
-      font-size: 1.8vw;
-      top: -3vw;
+      font-size: 1.5vw;
   }
     @media screen and (max-width:1023px){
-      font-size: 2.2vw;
+      font-size: 1.8vw;
   }
+  }
+  &__list{
+    @include list;
+    display: flex;
+  }
+  &__item{
+    margin-right: 1.7vw;
+    color: $white;
   }
   .icon{
-    font-size: 1.1vw;
+    font-size: 1.6vw;
     transition: all 0.2s 0s ease-in;
     &:hover{
       transform: scale(1.5);
@@ -887,35 +971,16 @@ body{
       font-size: 1.8vw;
   }
   }
-  &__list-title{
-    text-transform: uppercase;
-    font-size: 1.2vw;
-    @media screen and (max-width:1439px){
-      font-size: 1.5vw;
-  }
-    @media screen and (max-width:1023px){
-      font-size: 1.8vw;
-  }
-  }
-  &__list{
-    @include list;
-    display: flex;
- 
-  }
-  &__item{
-    margin-right: 1.5vw;
-    color: $white;
-  }
 }
 .footer{
-  padding-bottom: 1%;
+  padding-bottom: 3%;
   &__logo{
     display: inline-block;
     position: relative;
-    margin-right: 0.5vw;
-    font-size: 1vw;
+    margin: 0 0.6vw 1.4vw 0;
+    font-size: 1.2vw;
     &::before {
-      bottom: 1.2vw;
+      bottom: 0.1vw;
     }
     @media screen and (max-width:1439px){
       font-size: 1.6vw;
@@ -924,22 +989,31 @@ body{
       margin: 1vw 0.5vw 1vw 0;
     }
   }
+  &__text{
+    font-size: 1.2vw;
+    text-transform: uppercase;
+    @media screen and (max-width:1439px){
+      font-size: 1.6vw;
+    }
+  }
   &__link{
     font-weight: bold;
     text-transform: uppercase;
-    margin-right: 1vw;
+    margin-right: 1.9vw;
+    font-size: 1.1vw;
     position: relative;
+
     &::before {
       bottom: 0vw;
+      width: 100%;
+    }
+    &:hover::before {
+      width: 0%;
     }
     @media screen and (max-width:1439px){
       font-size: 1.6vw;
     }
   }
-  &__text{
-    @media screen and (max-width:1439px){
-      font-size: 1.6vw;
-    }
-  }
+
 }
 

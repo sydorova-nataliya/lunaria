@@ -24,9 +24,20 @@ $( document ).ready(function() {
 
             $(this).toggleClass('active');
             $(tab_id).toggleClass('active');
+          //   if(this.hasClass('active')&&  tab_id.hasClass('active')){
+          //     $(this).removeClass('active');
+          //     $(tab_id).removeClass('active');
+          //   } else{            
+          //   $('.tabs__btn').removeClass('active');
+          //   $('.tabs__content').removeClass('active');
+
+          //   $(this).toggleClass('active');
+          //   $(tab_id).toggleClass('active');
+          // }
+
         })
     });
-
+ 
     $('.slider').slick({
         dots: false,
         infinite: true,
